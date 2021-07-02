@@ -71,7 +71,7 @@
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="validationDefault03">Divisi</label>
-                        <select class="custom-select" name="pendidikan" id="pendidikan" required>
+                        <select class="custom-select" name="divisi" id="divisi" required>
                             <option selected disabled value="">Choose...</option>
                             <option value="marketing">Marketing</option>
                             <option value="operasional">Operasional</option>

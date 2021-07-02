@@ -19,7 +19,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('rekruitasi',RekruitasiController::class);
+Route::get('/rekruitasi',[RekruitasiController::class,'index']);
+
+Route::post('/rekruitasis',[RekruitasiController::class,'store'])->name('rekruitasi.store');
+
+Route::put('/rekruitasi/{Rekruitasi:id}',[RekruitasiController::class,'update']);
+
+Route::delete('/rekruitasi/{Rekruitasi:id}',[RekruitasiController::class,'destroy']);
+
 Route::post('/approve/{Rekruitasi:id}',[RekruitasiController::class,'approve']);
 Route::get('/decline/{Rekruitasi:id}',[RekruitasiController::class,'decline']);
 
